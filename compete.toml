@@ -16,7 +16,7 @@ test-suite = "{{ manifest_dir }}/testcases/{{ bin_alias }}.yml"
 # Open files with the command (`jq` command that outputs `string[] | string[][]`)
 #
 # VSCode:
-#open = '[["code", "-a", .manifest_dir], ["code"] + (.paths | map([.src, .test_suite]) | flatten)]'
+open = '[["code", "-a", .manifest_dir], ["code"] + (.paths | map([.src, .test_suite]) | flatten)]'
 # Emacs:
 #open = '["emacsclient", "-n"] + (.paths | map([.src, .test_suite]) | flatten)'
 
@@ -126,7 +126,7 @@ path = "./{{ contest }}"
 
 [test]
 # Toolchain for the test. (optional)
-toolchain = "1.42.0"
+toolchain = ""
 # Profile for `cargo build`. ("dev" | "release")
 #
 # Defaults to `"dev"`.
